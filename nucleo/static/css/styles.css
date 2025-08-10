@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,10 +13,9 @@ body {
 }
 
 .sidebar {
-    width: 250px;
+    width: 350px;
     background-color: #000;
     padding: 20px;
-    height: 100vh;
     box-sizing: border-box;
 }
 
@@ -20,14 +25,16 @@ body {
 }
 
 .profile img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
+    margin-top: 2rem;
 }
 
 .profile h2 {
     margin: 10px 0 5px;
+    font-size: 2rem;
 }
 
 .profile .tag {
@@ -38,12 +45,15 @@ body {
 nav ul {
     list-style: none;
     padding: 0;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    
 }
 
 nav ul li {
     margin: 15px 0;
+    margin-top: 3rem;
+    
 }
 
 nav ul li a {
@@ -51,7 +61,8 @@ nav ul li a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 1em;
+    
 }
 
 nav ul li a span {
@@ -68,6 +79,7 @@ nav ul li a span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    min-height: 100vh; /* para que tenga mínimo altura completa */
 }
 
 /* Estilos para las tarjetas en la vista principal */
@@ -88,15 +100,15 @@ nav ul li a span {
   font-weight: bold;
   box-shadow: 0 0 15px rgba(128, 0, 255, 0.2);
   transition: transform 0.2s ease;
-
   display: flex;               
   flex-direction: column;      
   justify-content: center;   
   align-items: center;       
   text-align: center;
   min-height: 150px;          
-
 }
+/* Estilos para el carrusel de tarjetas */
+
 
 .card span {
   display: block;
@@ -121,19 +133,98 @@ nav ul li a span {
 /* Tarjetas anchas (rectangulares horizontales) */
 .card.wide {
   grid-column: span 2;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 /* Botón estilo enlace */
 .btn {
-  margin-top: 20px;
   display: inline-block;
   color: #8e63f9;
   text-decoration: none;
   font-weight: bold;
+  font-size: 2rem;
+}
+.btn-certificados {
+  color: #8e63f9;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 ul li a i {
   margin-right: 10px;
   font-size: 1.2em;
+}
+
+/* estilo para mis tarjeta de presentacion del proyecto */ 
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Aquí forzamos 2 columnas iguales */
+    gap: 40px;
+    background: #1a1a1a;
+}
+
+.card-carrousel {
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 2.5rem;
+  transition: transform 0.2s ease;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* borde del color de la marca */
+  padding-bottom: 20px;
+}
+
+.carousel-item img {
+    border-radius: 15px; /* ajusta el valor según el redondeo que quieras */
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+    margin-left: 16px;
+}
+
+.tag {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 2px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* borde del color de la marca */
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.4em;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-weight: 300;
+
+}
+
+.card-carrousel h3 {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.carousel {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+}
+
+
+.home {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color: white;
 }
