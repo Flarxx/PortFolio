@@ -1,0 +1,70 @@
+/* === GRID PROYECTOS === */
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 40px;
+  background: #1a1a1a;
+  padding: 20px;
+}
+
+/* === CARD DEL CARRUSEL === */
+.card-carrousel {
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 2.5rem;
+  transition: transform 0.2s ease;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.card-carrousel:hover {
+  transform: scale(1.03);
+}
+
+/* === IMÁGENES DEL CARRUSEL === */
+.carousel-item img {
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+/* === TAGS DE TECNOLOGÍAS === */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 20px;
+  margin-left: 16px;
+}
+
+.tag {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 2px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 0.8rem;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/* === TÍTULOS EN LAS CARDS === */
+.card-carrousel h3 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
