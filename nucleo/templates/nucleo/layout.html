@@ -39,11 +39,11 @@
                 <li class="{% if request.path == proyectos_url %}active{% endif %}">
                     <a href="{{ proyectos_url }}"><i class="far fa-folder"></i> Proyectos</a>
                 </li>
-                <li class="{% if request.path == contacto_url %}active{% endif %}">
-                    <a href="{{ contacto_url }}"><i class="far fa-envelope"></i> Contacto</a>
-                </li>
                 <li class="{% if request.path == certificados_url %}active{% endif %}">
                     <a href="{{ certificados_url }}"><i class="far fa-file-alt"></i> Certificados</a>
+                </li>
+                <li class="{% if request.path == contacto_url %}active{% endif %}">
+                    <a href="{{ contacto_url }}"><i class="far fa-envelope"></i> Contacto</a>
                 </li>
             </ul>
         </nav>

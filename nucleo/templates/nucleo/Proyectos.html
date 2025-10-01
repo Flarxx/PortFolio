@@ -1,157 +1,215 @@
-{% extends 'nucleo/layout.html' %}
-{% load static %}
+{% extends 'nucleo/layout.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/proyectos.css' %}" />
 
-{% block content %}
-<link rel="stylesheet" href="{% static 'css/proyectos.css' %}">
+<div class="presentacion-container">
+    <!-- primer grid   -->
+  <div class="text-content">
+    <h1 class="greeting-title">
+      Hola, Soy <span class="nombre">Radames Cardenas</span>
+    </h1>
+    <p class="subtitle">
+      Creo aplicaciones a medida para hacer crecer tu negocio
+    </p>
+    <h3 class="subtitle1">Explora mis trabajos</h3>
+  </div>
+  <!-- segundo grid  -->
+  <div class="tech-overview">
+    <div class="tech-box">
+      <img src="https://www.svgrepo.com/show/452091/python.svg" alt="Python Logo" class="tech-logo"/>
+      <span class="tech-name">Python</span>
+    </div>
+
+    <div class="tech-box">
+      <img src="https://www.svgrepo.com/show/353657/django-icon.svg" alt="Django Logo" class="tech-logo"/>
+      <span class="tech-name">Django</span>
+    </div>
+    
+
+    <!-- Frontend Stack -->
+    <div class="tech-box experience-box">
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title">Últimos Proyectos</h2>
+
 <div class="grid-proyectos">
-
-    <div class="card-carrousel">
-        <div id="carousel1" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/proyectos/Lab1.png' %}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab3.png' %}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab4.png' %}" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+  <!-- CARD 1 -->
+  <div class="card-carrousel">
+    <div id="carousel1" class="carousel slide project-carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carousel1"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carousel1"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carousel1"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'img/proyectos/ejercicio.jpg' %}"
+            class="d-block w-100"
+            alt="Proyecto 1"
+          />
         </div>
-        <div class="tech-tags">
-    <span class="tag">HTML</span>
-    <span class="tag">CSS</span>
-    <span class="tag">JavaScript</span>
-    <span class="tag">Django</span>
-</div>
-<h3>Laboratorio de Proyectos</h3>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab3.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab4.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 3"
+          />
+        </div>
+      </div>
     </div>
 
-    <div class="card-carrousel">
-        <div id="carousel2" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/proyectos/Lab1.png' %}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab3.png' %}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab4.png' %}" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <div class="tech-tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Django</span>
+    </div>
+    <h3 class="project-title">Laboratorio Clínico</h3>
+    <div class="btn-container">
+      <button class="btn btn-sm btn-primary project-btn">Ver Proyecto</button>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card-carrousel">
+    <div id="carousel2" class="carousel slide project-carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'img/proyectos/ejemplo3.png' %}"
+            class="d-block w-100"
+            alt="Proyecto Corte E Confort"
+          />
         </div>
-        <div class="tech-tags">
-    <span class="tag">Wordpress</span>
-    <span class="tag">CSS</span>
-    <span class="tag">JQuery</span>
-    <span class="tag">Django</span>
-</div>
-<h3>Laboratorio de Proyectos</h3>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab3.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab4.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 3"
+          />
+        </div>
+      </div>
     </div>
 
-    <div class="card-carrousel">
-            <div id="carousel3" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/proyectos/Lab1.png' %}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab3.png' %}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab4.png' %}" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <div class="tech-tags">
+      <span class="tag">WordPress</span>
+      <span class="tag">CSS</span>
+      <span class="tag">jQuery</span>
+      <span class="tag">Django</span>
+    </div>
+    <h3 class="project-title">Corte E Confort</h3>
+    <div class="btn-container">
+      <button class="btn btn-sm btn-primary project-btn">Ver Proyecto</button>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card-carrousel">
+    <div id="carousel3" class="carousel slide project-carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'img/proyectos/4.png' %}"
+            class="d-block w-100"
+            alt="Ganacontresce"
+          />
         </div>
-        <div class="tech-tags">
-    <span class="tag">Wordpress</span>
-    <span class="tag">CSS</span>
-    <span class="tag">JQuery</span>
-    <span class="tag">Django</span>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab3.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab4.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-tags">
+      <span class="tag">WordPress</span>
+      <span class="tag">CSS</span>
+      <span class="tag">jQuery</span>
+      <span class="tag">Django</span>
+    </div>
+    <h3 class="project-title">Ganacontresce</h3>
+    <div class="btn-container">
+      <button class="btn btn-sm btn-primary project-btn">Ver Proyecto</button>
+    </div>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="card-carrousel">
+    <div id="carousel4" class="carousel slide project-carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'img/proyectos/Lab1.png' %}"
+            class="d-block w-100"
+            alt="Proyecto"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab3.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'img/proyectos/Lab4.png' %}"
+            class="d-block w-100"
+            alt="Proyecto 3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-tags">
+      <span class="tag">WordPress</span>
+      <span class="tag">CSS</span>
+      <span class="tag">jQuery</span>
+      <span class="tag">Django</span>
+    </div>
+    <h3 class="project-title">Laboratorio Clínico</h3>
+    <div class="btn-container">
+      <button class="btn btn-sm btn-primary project-btn">Ver Proyecto</button>
+    </div>
+  </div>
 </div>
-<h3>Laboratorio de Proyectos</h3>
-        </div>
-
-        <div class="card-carrousel">
-            <div id="carousel4" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/proyectos/Lab1.png' %}" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab3.png' %}" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/proyectos/Lab4.png' %}" class="d-block" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="tech-tags">
-    <span class="tag">Wordpress</span>
-    <span class="tag">CSS</span>
-    <span class="tag">JQuery</span>
-    <span class="tag">Django</span>
-</div>
-<h3>Laboratorio Clinico</h3>
-        </div>
-
-
-        {% endblock %}
+{% endblock %}

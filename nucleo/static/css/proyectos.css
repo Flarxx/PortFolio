@@ -1,70 +1,217 @@
-/* === GRID PROYECTOS === */
-.grid-proyectos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  gap: 40px;
-  background: #1a1a1a;
-  padding: 20px;
+/* ================================== */
+/* === ESTILOS DE LA PRESENTACIÓN === */
+/* ================================== */
+
+.presentacion-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+    margin: 0 0 40px 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* === CARD DEL CARRUSEL === */
+.greeting-title {
+    font-size: 3.5rem; 
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.project-title{
+  color: #e0e0e0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+.explore-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Boxes de Tecnología --- */
+.tech-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    align-content: start; 
+}
+
+.tech-box {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-box {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-box .number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.experience-box .label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+}
+
+/* ================================== */
+/* === PROYECTOS (GRID & CARDS) ===== */
+/* ================================== */
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin: 0 0 30px 2rem;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(2, auto);   /* 2 filas automáticas */
+    gap: 30px;
+    padding: 0;
+    margin-left: 2rem;
+}
+
+/* --- Card --- */
 .card-carrousel {
-  background-color: #1a1a1a;
-  color: white;
-  font-size: 2.5rem;
-  transition: transform 0.2s ease;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 20px;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-carrousel:hover {
-  transform: scale(1.03);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* === IMÁGENES DEL CARRUSEL === */
-.carousel-item img {
-  border-radius: 15px;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.carousel {
-  height: 100%;
+/* --- Carrusel dentro de la Card --- */
+.project-carousel {
+    height: 180px;
+    max-height: 180px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
 
 .carousel-inner {
-  height: 100%;
+    height: 100%;
 }
 
-/* === TAGS DE TECNOLOGÍAS === */
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* --- Tags de tecnologías --- */
 .tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 20px;
-  margin-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 0 20px;
 }
 
 .tag {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.4);
-  padding: 2px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 0.8rem;
-  font-family: 'Inter', 'Roboto', sans-serif;
-  font-weight: 300;
+    color: #e0e0e0;
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
 }
 
-/* === TÍTULOS EN LAS CARDS === */
+/* --- Título y botón del proyecto --- */
 .card-carrousel h3 {
-  margin-left: 20px;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: 500;
+    margin: 15px 0 0 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.project-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    color: white;
+    width: 200px;   
+}
+
+.btn-container {
+    text-align: right; /* alinea el botón a la derecha */
+    margin-top: 10px; /* separa un poco del título */
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+.tech-logo {
+    width: 60px;   /* tamaño grande y uniforme */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.nombre{
+  color: #007bff;
+}
+
+.subtitle1 {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+  }
+
+
+/*  modificando iconos */
+
+.mini-icons {
+    margin-top: 8px;          /* separa los íconos del contenido de arriba */
+    display: flex;            /* coloca los íconos en fila */
+    flex-wrap: wrap;          /* si no caben, que salten a otra línea */
+    gap: 8px;                 /* espacio entre íconos */
+    justify-content: center;  /* centra los íconos horizontalmente */
+    align-items: center;      /* los alinea verticalmente */
+}
+
+.mini-tech-logo {
+    width: 30px;              /* tamaño uniforme de los íconos */
+    height: 30px;
+    opacity: 0.9;             /* un poco más suave */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;          /* cursor tipo "mano" */
+}
+
+.mini-tech-logo:hover {
+    transform: scale(1.2);    /* efecto de zoom al pasar el mouse */
+    opacity: 1;               /* más brillante al hover */
 }
