@@ -1,11 +1,15 @@
 /* ================================== */
 /* === ESTILOS DE LA PRESENTACIÓN === */
 /* ================================== */
-
+:root {
+  --neon-blue-color: #007bff; /* Un azul de Bootstrap vibrante */
+  /* O si prefieres un azul más oscuro que combine con los tonos de tu portfolio: */
+  /* --neon-blue-color: #0056b3; */
+}
 .presentacion-container {
     display: grid;
     grid-template-columns: 2fr 1fr; 
-    gap: 40px;
+    gap: 20px;
     margin: 0 0 40px 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -150,6 +154,7 @@
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 500;
+    border: solid 1px rgba(0, 123, 255, 0.3);
 }
 
 /* --- Título y botón del proyecto --- */
@@ -159,13 +164,43 @@
     font-weight: 600;
 }
 
-.project-btn {
-    font-size: 0.9rem;
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    color: white;
-    width: 200px;   
+/* Estilos para el botón Neón (Opción 4 de Image 1) */
+.btn-neon {
+    background-color: transparent;
+    border: 2px solid var(--neon-blue-color); /* Usa la variable de color */
+    color: var(--neon-blue-color); /* Color del texto */
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    /* Sombras base con el nuevo color azul */
+    box-shadow: 0 0 5px var(--neon-blue-color),
+                0 0 10px var(--neon-blue-color),
+                0 0 15px rgba(0, 123, 255, 0.4); /* Usa rgba del nuevo color */
 }
+
+.btn-neon:hover {
+    color: #ffffff; /* Texto blanco en hover para mejor contraste */
+    background-color: var(--neon-blue-color); /* Fondo se llena con el azul */
+    /* Sombras más intensas al hover con el nuevo color azul */
+    box-shadow: 0 0 15px var(--neon-blue-color),
+                0 0 25px rgba(0, 123, 255, 0.6),
+                0 0 40px rgba(0, 123, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.btn-neon:active {
+    transform: translateY(0);
+    box-shadow: 0 0 5px var(--neon-blue-color); /* Sombra tenue activa */
+}
+
+
 
 .btn-container {
     text-align: right; /* alinea el botón a la derecha */

@@ -139,6 +139,8 @@ nav ul li a span {
   margin-top: 20px;
 }
 
+
+
 /* === ICONOS EXTRA === */
 .home {
   width: 30px;
@@ -149,9 +151,8 @@ nav ul li a span {
 
 /* === TÍTULO EXTRA (fuera del profile) === */
 .Titulo {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: white;
   text-align: center;
   margin-bottom: 20px;
 }
