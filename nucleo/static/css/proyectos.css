@@ -2,10 +2,9 @@
 /* === ESTILOS DE LA PRESENTACIÓN === */
 /* ================================== */
 :root {
-  --neon-blue-color: #007bff; /* Un azul de Bootstrap vibrante */
-  /* O si prefieres un azul más oscuro que combine con los tonos de tu portfolio: */
-  /* --neon-blue-color: #0056b3; */
+  --neon-blue-color: #007bff; /* Azul Bootstrap */
 }
+
 .presentacion-container {
     display: grid;
     grid-template-columns: 2fr 1fr; 
@@ -26,28 +25,11 @@
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 40px;
 }
 
-.explore-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.explore-button:hover {
-    background-color: #0056b3;
-}
-
-/* --- Boxes de Tecnología --- */
 .tech-overview {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -98,14 +80,13 @@
 
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: repeat(2, auto);   /* 2 filas automáticas */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 30px;
     padding: 0;
     margin-left: 2rem;
 }
 
-/* --- Card --- */
 .card-carrousel {
     background-color: #2a2a2a;
     color: white;
@@ -121,7 +102,6 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Carrusel dentro de la Card --- */
 .project-carousel {
     height: 180px;
     max-height: 180px;
@@ -139,7 +119,6 @@
     object-fit: cover;
 }
 
-/* --- Tags de tecnologías --- */
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -157,61 +136,21 @@
     border: solid 1px rgba(0, 123, 255, 0.3);
 }
 
-/* --- Título y botón del proyecto --- */
 .card-carrousel h3 {
     margin: 15px 0 0 20px;
     font-size: 1.4rem;
     font-weight: 600;
 }
 
-/* Estilos para el botón Neón (Opción 4 de Image 1) */
-.btn-neon {
-    background-color: transparent;
-    border: 2px solid var(--neon-blue-color); /* Usa la variable de color */
-    color: var(--neon-blue-color); /* Color del texto */
-    padding: 12px 28px;
-    border-radius: 12px;
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    /* Sombras base con el nuevo color azul */
-    box-shadow: 0 0 5px var(--neon-blue-color),
-                0 0 10px var(--neon-blue-color),
-                0 0 15px rgba(0, 123, 255, 0.4); /* Usa rgba del nuevo color */
-}
-
-.btn-neon:hover {
-    color: #ffffff; /* Texto blanco en hover para mejor contraste */
-    background-color: var(--neon-blue-color); /* Fondo se llena con el azul */
-    /* Sombras más intensas al hover con el nuevo color azul */
-    box-shadow: 0 0 15px var(--neon-blue-color),
-                0 0 25px rgba(0, 123, 255, 0.6),
-                0 0 40px rgba(0, 123, 255, 0.8);
-    transform: translateY(-2px);
-}
-
-.btn-neon:active {
-    transform: translateY(0);
-    box-shadow: 0 0 5px var(--neon-blue-color); /* Sombra tenue activa */
-}
-
-
-
 .btn-container {
-    text-align: right; /* alinea el botón a la derecha */
-    margin-top: 10px; /* separa un poco del título */
+    text-align: right;
+    margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
 }
 
-
 .tech-logo {
-    width: 60px;   /* tamaño grande y uniforme */
+    width: 60px;
     height: 60px;
     margin-bottom: 10px;
 }
@@ -224,29 +163,82 @@
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 40px;
-  }
-
-
-/*  modificando iconos */
+}
 
 .mini-icons {
-    margin-top: 8px;          /* separa los íconos del contenido de arriba */
-    display: flex;            /* coloca los íconos en fila */
-    flex-wrap: wrap;          /* si no caben, que salten a otra línea */
-    gap: 8px;                 /* espacio entre íconos */
-    justify-content: center;  /* centra los íconos horizontalmente */
-    align-items: center;      /* los alinea verticalmente */
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
 }
 
 .mini-tech-logo {
-    width: 30px;              /* tamaño uniforme de los íconos */
+    width: 30px;
     height: 30px;
-    opacity: 0.9;             /* un poco más suave */
+    opacity: 0.9;
     transition: transform 0.2s ease, opacity 0.2s ease;
-    cursor: pointer;          /* cursor tipo "mano" */
+    cursor: pointer;
 }
 
 .mini-tech-logo:hover {
-    transform: scale(1.2);    /* efecto de zoom al pasar el mouse */
-    opacity: 1;               /* más brillante al hover */
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.tech-swiper {
+   width: 100%;
+  overflow: hidden;
+}
+
+.tech-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tech-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  padding: 8px;
+  user-select: none;
+}
+
+.tech-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+}
+
+.tech-name {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.tech-btn {
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 500;
+  transition: transform .22s ease, background-color .22s ease;
+  font-size: 0.85rem;
+}
+
+.tech-btn:hover {
+  transform: scale(1.04);
+  color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: inherit;
+}
+
+@media (max-width: 480px) {
+  .tech-icon { width: 48px; height: 48px; }
+  .tech-name { font-size: 0.85rem; }
 }

@@ -156,3 +156,67 @@ nav ul li a span {
   text-align: center;
   margin-bottom: 20px;
 }
+
+
+/* botones*/
+
+.btn{
+  color: white;
+  font-size: 1.2rem;
+}
+
+.btn-modern-primary {
+    /* Diseño base */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    
+    /* Colores y efecto */
+    background-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-modern-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+.btn-modern-download {
+    /* Diseño base (similar al primario) */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    
+    /* Colores y efecto */
+    background-color: #28a745;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-modern-download:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+}
+
+/* Estilo para el ícono de descarga */
+.btn-modern-download i {
+    font-size: 1.1em;
+}
+
