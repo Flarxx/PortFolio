@@ -58,3 +58,35 @@
   grid-column: span 2;
   font-size: 2rem;
 }
+
+/* querys para tables y telefonos  */ 
+
+/* === Tablet (pantallas medianas) === */
+@media (max-width: 992px) {
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+/* === Móviles (pantallas pequeñas) === */
+@media (max-width: 600px) {
+    .grid-cards {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+
+    .card.big {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .card.wide {
+        grid-column: span 1;
+    }
+}

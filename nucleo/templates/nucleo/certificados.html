@@ -2,9 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <!-- Tu CSS personalizado -->
   <link rel="stylesheet" href="{% static 'css/certificados.css' %}">
 {% endblock %}
 
@@ -17,15 +15,23 @@
           <div class="swiper-slide">
             <article class="card-cert">
               <div class="cert-frame">
-                <!-- Swiper lazy: data-src en vez de src -->
-                <img data-src="{{ cert.image_url }}" alt="{{ cert.title }}" class="cert-image swiper-lazy">
-                <div class="swiper-lazy-preloader"></div>
+                {% if cert.imagen %}
+                  <img src="{{ cert.imagen.url }}" alt="{{ cert.titulo }}" class="cert-image">
+                {% else %}
+                  <img src="{% static 'images/placeholder-cert.jpg' %}" alt="Sin imagen" class="cert-image">
+                {% endif %}
               </div>
 
               <div class="card-info">
-                <h3 class="cert-title">{{ cert.title }}</h3>
-                <p class="cert-sub">{{ cert.issuer }} · {{ cert.date }}</p>
-                <a class="btn-view" href="{{ cert.certificate_url }}" target="_blank" rel="noopener">Ver Certificado</a>
+                <h3 class="cert-title">{{ cert.titulo }}</h3>
+                <p class="cert-sub">
+                  {{ cert.emisor }}{% if cert.fecha %} · {{ cert.fecha|date:"d M Y" }}{% endif %}
+                </p>
+                {% if cert.enlace_externo %}
+                  <a class="btn-view" href="{{ cert.enlace_externo }}" target="_blank" rel="noopener">Ver Certificado</a>
+                {% elif cert.archivo %}
+                  <a class="btn-view" href="{{ cert.archivo.url }}" target="_blank" rel="noopener">Ver Archivo</a>
+                {% endif %}
               </div>
             </article>
           </div>
@@ -34,20 +40,11 @@
         {% endfor %}
       </div>
 
-      <!-- Flechas custom (SVG) -->
-      <div class="custom-nav custom-prev" aria-label="Anterior" role="button" tabindex="0">
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M44 18 L26 35 L44 52" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+      <!-- Flechas -->
+      <div class="custom-prev">&#10094;</div>
+      <div class="custom-next">&#10095;</div>
 
-      <div class="custom-nav custom-next" aria-label="Siguiente" role="button" tabindex="0">
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M26 18 L44 35 L26 52" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-
-      <!-- Pagination (dots) -->
+      <!-- Dots -->
       <div class="swiper-pagination"></div>
     </div>
   </div>
@@ -55,8 +52,6 @@
 {% endblock %}
 
 {% block scripts %}
-  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- Tu JS personalizado -->
   <script src="{% static 'js/certificados.js' %}"></script>
 {% endblock %}

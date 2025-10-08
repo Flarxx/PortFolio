@@ -1,0 +1,21 @@
+{% extends 'nucleo/layout.html' %}
+{% load static %}
+
+{% block content %}     
+
+<form method="POST" action="{% url 'contacto' %}">
+    {% csrf_token %}
+    <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea name="mensaje" id="mensaje" required></textarea>
+
+    <button type="submit">Enviar</button>
+    </div>
+</form>
+{% endblock %}

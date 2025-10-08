@@ -220,3 +220,110 @@ nav ul li a span {
     font-size: 1.1em;
 }
 
+/* querys para mi sidebar (estilos que heredan todos */
+
+/* ===== HEADER MÓVIL ===== */
+.mobile-header {
+    display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+
+@media (max-width: 768px) {
+
+    /* Mostrar botón hamburguesa */
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background: #000;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Sidebar oculto por defecto */
+    .sidebar {
+      
+        position: fixed;
+        top: 0;
+        left: -150px; 
+        width: 60px; 
+        height: 100%;
+        background: #000;
+        overflow-y: hidden; 
+        transition: left 0.3s ease, width 0.3s ease;
+        z-index: 999;
+        padding-top: 60px;
+    }
+
+    /* Sidebar activo */
+    .sidebar.active {
+        left: 0;
+        width: 150px; /* ancho cuando se abre */
+        overflow-y: auto; /* scroll si es necesario */
+    }
+
+    /* Ajuste de contenido */
+    .main-content {
+        margin-left: 0 !important;
+        padding-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Imagen de perfil más pequeña */
+    .profile img {
+        width: 60px;
+        height: 60px;
+        margin-top: 0.5rem;
+    }
+
+    .profile h2 {
+      font-size: 1.2rem;
+    }
+
+    /* Ocultar texto de los menús */
+    nav ul li a span {
+        display: none;
+    }
+
+    /* Iconos más alineados a la izquierda */
+    nav ul li a {
+        justify-content: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li a i {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #e0e0e0;
+    }
+
+    /* Ajustes para la lista del nav */
+    nav ul {
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+
+/*PROBANDO HEADER MOBILE */
+

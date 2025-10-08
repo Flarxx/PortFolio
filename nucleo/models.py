@@ -26,3 +26,28 @@ class Certificado(models.Model):
         if self.archivo:
             return self.archivo.url
         return '#'
+
+class Proyecto(models.Model):
+    titulo = models.CharField(max_length=150)
+    descripcion = models.TextField(blank=True, null=True)
+    tecnologias = models.CharField(max_length=200, help_text="Ejemplo: HTML, CSS, JS, Django")
+    enlace_codigo = models.URLField(blank=True, null=True)
+    enlace_proyecto = models.URLField(blank=True, null=True)
+    fecha = models.DateField(blank=True, null=True)
+    
+    # imágenes del carrusel
+    imagen1 = models.ImageField(upload_to='proyectos/', blank=True, null=True)
+    imagen2 = models.ImageField(upload_to='proyectos/', blank=True, null=True)
+    imagen3 = models.ImageField(upload_to='proyectos/', blank=True, null=True)
+
+    def __str__(self):
+        return self.titulo
+    
+    def imagenes(self):
+        return [img for img in [self.imagen1, self.imagen2, self.imagen3] if img]
+
+    def lista_tecnologias(self):
+        """Convierte la cadena en lista separada por comas"""
+        return [t.strip() for t in self.tecnologias.split(',') if t.strip()]
+
+
