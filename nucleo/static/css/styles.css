@@ -83,7 +83,7 @@ nav ul li a {
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
-  margin-left: 5rem;
+  margin-left: 4rem;
   margin-top: 4rem;
 }
 
@@ -326,4 +326,6 @@ nav ul li a span {
 }
 
 /*PROBANDO HEADER MOBILE */
+
+/* probando estilos */
 

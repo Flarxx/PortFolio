@@ -1,74 +1,111 @@
+/* Contenedor principal */
 .contact-container {
-    max-width: 700px;
-    margin: 40px auto;
-    background: #fff;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #1e1e2f;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Título */
 .contact-title {
     font-size: 28px;
     font-weight: bold;
+    color: #00aaff;
     text-align: center;
-    color: #007bff;
     margin-bottom: 5px;
 }
 
 .contact-subtitle {
     text-align: center;
-    color: #555;
+    color: #ccc;
     margin-bottom: 25px;
 }
 
+/* Mensaje de éxito */
 .contact-success {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #2d4a2d;
+    color: #a6f1a6;
     padding: 12px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
+/* Formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grupos de campos */
 .contact-form .form-group {
     margin-bottom: 20px;
 }
 
+/* Etiquetas */
 .contact-form label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
+/* Inputs y textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    background: #2b2b3c;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
     font-size: 16px;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #007bff;
     outline: none;
+    background: #33334d;
+    box-shadow: 0 0 5px #00aaff;
 }
 
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* Botón */
 .btn-contact {
-    background-color: #007bff;
+    background: linear-gradient(90deg, #00aaff, #0056b3);
     color: white;
     padding: 14px 20px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    width: 100%;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-contact:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #0056b3, #00aaff);
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .contact-title {
+        font-size: 24px;
+    }
 }
