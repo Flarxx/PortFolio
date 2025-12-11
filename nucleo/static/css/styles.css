@@ -5,18 +5,18 @@
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
-    display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d; /* dark grey (sidebar tone) */
+  color: #fff;
+  display: flex;
 }
 
 .sidebar {
-    width: 350px;
-    background-color: #000;
-    padding: 20px;
-    box-sizing: border-box;
+  width: 350px;
+  background-color: #0d0d0d; /* dark grey (sidebar tone) */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .profile {
@@ -71,15 +71,15 @@ nav ul li a span {
 }
 
 .main-content {
-    flex: 1;
-    padding: 40px;
-    min-height: 100%vh;
-    background: radial-gradient(circle at center, #3b0066 0%, #111 40%);
-    color: #fff;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    min-height: 100vh; /* para que tenga mínimo altura completa */
+  flex: 1;
+  padding: 40px;
+  min-height: 100%vh;
+  background: #1a1a1a; /* light grey (content tone) */
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  min-height: 100vh; /* para que tenga mínimo altura completa */
 }
 
 /* Estilos para las tarjetas en la vista principal */
@@ -88,7 +88,7 @@ nav ul li a span {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 40px;
-  background: radial-gradient(circle at center, #3b0066 0%, #111 40%);
+  background: #1a1a1a; /* light grey (content tone) */
 }
 
 .card {
@@ -160,10 +160,10 @@ ul li a i {
 /* estilo para mis tarjeta de presentacion del proyecto */ 
 
 .grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Aquí forzamos 2 columnas iguales */
-    gap: 40px;
-    background: #1a1a1a;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Aquí forzamos 2 columnas iguales */
+  gap: 40px;
+  background: #1a1a1a; /* light grey (content tone) */
 }
 
 .card-carrousel {
@@ -228,3 +228,164 @@ ul li a i {
     margin-right: 10px;
     color: white;
 }
+
+/* ----- Professional project styles ----- */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+    align-items: start;
+}
+
+.card-carrousel {
+  background-color: #1a1a1a; /* ensure same content tone */
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-carrousel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+
+.card-carrousel .carousel {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.06));
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px; /* fixed visual height for all slides */
+  object-fit: cover; /* keep images nicely cropped */
+  display: block;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 18px 6px 18px;
+    align-items: center;
+}
+
+.tag {
+    display: inline-block;
+    color: #e9e7ff;
+    background: rgba(142,99,249,0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(142,99,249,0.12);
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-carrousel h3 {
+  margin: 12px 18px 18px 18px;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.card-carrousel p {
+  margin: 0 18px 18px 18px;
+  color: #cfc9ff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  text-align: left;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.45));
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.35);
+}
+
+.carousel-indicators .active {
+  background-color: #8e63f9;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.6));
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .carousel-item img { height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img { height: 180px; }
+  .tag { font-size: 0.8rem; padding: 5px 10px; }
+  .card-carrousel h3 { font-size: 1.05rem; }
+}
+
+/* small utility */
+.btn-project {
+  display: inline-block;
+  background: linear-gradient(90deg,#8e63f9,#6a4ef0);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* contact form styles */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.contact-card {
+  background: #121212;
+  padding: 28px;
+  border-radius: 12px;
+  width: 640px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.contact-card h2 { margin-bottom: 8px; }
+.contact-card p { color: #cfc9ff; margin-bottom: 18px; }
+
+.form-row { margin-bottom: 12px; }
+.form-row input, .form-row textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: #0f0f14;
+  color: #fff;
+}
+
+.alert { background: rgba(142,99,249,0.12); padding: 8px 12px; border-radius: 8px; margin-bottom: 12px; color: #e9e7ff; }
+
+/* certificates */
+.certificates-page { padding: 30px; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 18px; }
+.cert-card { background: #121212; padding: 12px; border-radius: 10px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+.cert-card img { max-width: 100%; height: 140px; object-fit: contain; display:block; margin: 0 auto 8px auto; }
+.cert-card h4 { color: #e9e7ff; font-size: 0.95rem; }

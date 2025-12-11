@@ -1,0 +1,22 @@
+{% extends 'nucleo/layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="certificates-page">
+  <h2>Certificados</h2>
+  <div class="cert-grid">
+    {% for cert in certificates %}
+      <div class="cert-card">
+        {% if cert.image %}
+          <img src="{{ cert.image.url }}" alt="{{ cert.title }}">
+        {% else %}
+          <img src="{% static 'img/certificados/default-cert.png' %}" alt="{{ cert.title }}">
+        {% endif %}
+        <h4>{{ cert.title }}</h4>
+      </div>
+    {% empty %}
+      <p>No hay certificados añadidos todavía.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
