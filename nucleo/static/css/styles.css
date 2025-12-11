@@ -7,14 +7,14 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #0d0d0d; /* dark grey (sidebar tone) */
+  background-color: #0d0d0d;
   color: #fff;
   display: flex;
 }
 
 .sidebar {
-  width: 350px;
-  background-color: #0d0d0d; /* dark grey (sidebar tone) */
+  width: 250px;
+  background-color: #0d0d0d;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -32,9 +32,10 @@ body {
     margin-top: 2rem;
 }
 
-.profile h2 {
+.profile h2 span {
     margin: 10px 0 5px;
-    font-size: 2rem;
+    font-size: 1rem;
+    color: #2896df;
 }
 
 .profile .tag {
@@ -52,7 +53,7 @@ nav ul {
 
 nav ul li {
     margin: 15px 0;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     
 }
 
@@ -92,11 +93,11 @@ nav ul li a span {
 }
 
 .card {
- background-color: #1a1a1a;
+  background-color: #0d0d0d;
   color: white;
   padding: 30px;
   border-radius: 12px;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   box-shadow: 0 0 15px rgba(128, 0, 255, 0.2);
   transition: transform 0.2s ease;
@@ -105,14 +106,14 @@ nav ul li a span {
   justify-content: center;   
   align-items: center;       
   text-align: center;
-  min-height: 150px;          
+  min-height: 100px;          
 }
 /* Estilos para el carrusel de tarjetas */
 
 
 .card span {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: normal;
   margin-top: 10px;
   color: #aaa;
@@ -127,7 +128,7 @@ nav ul li a span {
   grid-column: span 2;
   grid-row: span 2;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 /* Tarjetas anchas (rectangulares horizontales) */
@@ -139,13 +140,13 @@ nav ul li a span {
 /* Botón estilo enlace */
 .btn {
   display: inline-block;
-  color: #8e63f9;
+  color: #2896df;
   text-decoration: none;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .btn-certificados {
-  color: #8e63f9;
+  color: #2896df;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
@@ -154,7 +155,7 @@ nav ul li a span {
 
 ul li a i {
   margin-right: 10px;
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 /* estilo para mis tarjeta de presentacion del proyecto */ 
@@ -389,3 +390,5 @@ ul li a i {
 .cert-card { background: #121212; padding: 12px; border-radius: 10px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
 .cert-card img { max-width: 100%; height: 140px; object-fit: contain; display:block; margin: 0 auto 8px auto; }
 .cert-card h4 { color: #e9e7ff; font-size: 0.95rem; }
+
+
