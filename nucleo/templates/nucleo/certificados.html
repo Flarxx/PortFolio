@@ -2,21 +2,36 @@
 {% load static %}
 
 {% block content %}
-<div class="certificates-page">
-  <h2>Certificados</h2>
-  <div class="cert-grid">
+
+<h2 class="mb-4 text-white text-center">Certificados</h2>
+
+<div id="carouselCertificados" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 800px;">
+  
+  <div class="carousel-inner">
     {% for cert in certificates %}
-      <div class="cert-card">
+    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+      <div class="cert-card-slider">
         {% if cert.image %}
-          <img src="{{ cert.image.url }}" alt="{{ cert.title }}">
+          <img src="{{ cert.image.url }}" class="d-block w-100 cert-image" alt="{{ cert.title }}">
         {% else %}
-          <img src="{% static 'img/certificados/default-cert.png' %}" alt="{{ cert.title }}">
+          <img src="{% static 'img/certificados/default-cert.png' %}" class="d-block w-100 cert-image" alt="{{ cert.title }}">
         {% endif %}
-        <h4>{{ cert.title }}</h4>
+        <h4 class="cert-title text-white mt-3">{{ cert.title }}</h4>
       </div>
-    {% empty %}
-      <p>No hay certificados añadidos todavía.</p>
+    </div>
     {% endfor %}
   </div>
+
+  <!-- Flechas -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificados" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
 </div>
+
 {% endblock %}
