@@ -9,7 +9,7 @@
 
     {% for project in projects %}
     <div class="card-carrousel">
-         <h3 class="proyec_title">{{ project.title }}</h3>
+        <h3 class="proyec_title">{{ project.title }}</h3>
         <div id="carousel{{ forloop.counter }}" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel{{ forloop.counter }}" data-bs-slide-to="0"
@@ -61,14 +61,17 @@
             <span class="tag">CSS</span>
             <span class="tag">JavaScript</span>
             {% endfor %}
+
             {% if project.github %}
-            <a class="tag" href="{{ project.github }}" target="_blank" rel="noopener">GitHub</a>
+            <a class="tag-github" href="{{ project.github }}" target="_blank" rel="noopener">Código GitHub aquí</a>
             {% endif %}
+
             {% if project.live %}
-            <a class="tag" href="{{ project.live }}" target="_blank" rel="noopener">Live</a>
+            <a class="tag-live" href="{{ project.live }}" target="_blank" rel="noopener">Visita el proyecto aquí</a>
             {% endif %}
         </div>
-       
+
+
     </div>
     {% endfor %}
 

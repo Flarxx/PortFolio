@@ -5,7 +5,14 @@
     box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, p, ul, li {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -14,15 +21,18 @@ body, h1, h2, h3, h4, p, ul, li {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0d0d0d; /* Fondo oscuro principal */
+    background-color: #0d0d0d;
+    /* Fondo oscuro principal */
     color: #fff;
-    display: flex; /* Permite que la barra lateral y el contenido se alineen */
+    display: flex;
+    /* Permite que la barra lateral y el contenido se alineen */
 }
 
 /* =======================================
    2. BARRA LATERAL (SIDEBAR)
    ======================================= */
 .sidebar {
+    position: fixed;
     width: 250px;
     background-color: #0d0d0d;
     padding: 20px;
@@ -51,7 +61,8 @@ body {
 }
 
 .develo1 {
-    color: #8e63f9; /* Color azul para énfasis */
+    color: #8e63f9;
+    /* Color azul para énfasis */
 }
 
 .develo {
@@ -74,7 +85,7 @@ nav ul {
 
 nav ul li {
     /* Margen de 15px arriba y abajo para separar los enlaces */
-    margin: 40px 0; 
+    margin: 40px 0;
 }
 
 nav ul li a {
@@ -83,10 +94,10 @@ nav ul li a {
     display: flex;
     align-items: center;
     font-size: 1rem;
-    padding: 10px 15px; 
-    border-radius: 8px; 
-    transition: all 0.3s ease; 
-    position: relative; 
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 /* Estilo para los iconos dentro de los enlaces */
@@ -95,20 +106,20 @@ nav ul li a svg {
     width: 24px;
     height: 24px;
     stroke-width: 2;
-    transition: all 0.3s ease; 
-    stroke: #fff; 
+    transition: all 0.3s ease;
+    stroke: #fff;
 }
 
 nav ul li a:hover {
-    color: #8e63f9; 
-    background-color: rgba(142, 99, 249, 0.1); 
-    transform: translateX(10px); 
+    color: #8e63f9;
+    background-color: rgba(142, 99, 249, 0.1);
+    transform: translateX(10px);
 }
 
 
 nav ul li a:hover svg {
-    stroke: #8e63f9; 
-    filter: drop-shadow(0 0 5px rgba(142, 99, 249, 0.6)); 
+    stroke: #8e63f9;
+    filter: drop-shadow(0 0 5px rgba(142, 99, 249, 0.6));
 }
 
 
@@ -118,12 +129,13 @@ nav ul li a:hover svg {
    3. CONTENIDO PRINCIPAL (MAIN-CONTENT)
    ======================================= */
 .main-content {
-    flex: 1; 
+    margin-left: 250px;
+    flex: 1;
     padding: 40px;
     background: #1a1a1a;
     color: #fff;
     /* Cambia a display: block o flex-direction: column */
-    display: block; 
+    display: block;
     min-height: 100vh;
 }
 
@@ -212,7 +224,7 @@ nav ul li a:hover svg {
 .grid-proyectos {
     display: grid;
     /* Se usa 2 columnas por defecto para escritorio, se ajusta en media queries */
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     padding: 20px;
     background: #1a1a1a;
@@ -229,7 +241,7 @@ nav ul li a:hover svg {
     transition: transform 220ms ease, box-shadow 220ms ease;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .card-carrousel:hover {
@@ -244,17 +256,19 @@ nav ul li a:hover svg {
 
 .carousel-item img {
     width: 100%;
-    height: 300px; /* Altura fija para la imagen del carrusel */
+    height: 300px;
+    /* Altura fija para la imagen del carrusel */
     object-fit: cover;
     display: block;
-    border-radius: 15px; /* Duplicado, pero se mantiene la más específica */
+    border-radius: 15px;
+    /* Duplicado, pero se mantiene la más específica */
 }
 
 /* --- Etiquetas de Tecnología (Tags) --- */
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
     padding: 14px 18px 6px 18px;
     align-items: center;
 }
@@ -264,10 +278,11 @@ nav ul li a:hover svg {
     color: #e9e7ff;
     background: rgba(142, 99, 249, 0.08);
     padding: 6px 12px;
-    border-radius: 999px; /* Pill shape */
+    border-radius: 999px;
+    /* Pill shape */
     border: 1px solid rgba(142, 99, 249, 0.12);
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 500;
 }
 
@@ -283,12 +298,14 @@ nav ul li a:hover svg {
     font-size: 0.95rem;
     line-height: 1.4;
 }
+
 /* --- Botones importantes de proyecto --- */
 .project-links {
     display: flex;
     gap: 12px;
     margin-top: 10px;
-    flex-wrap: wrap; /* En móviles permite que bajen de línea */
+    flex-wrap: wrap;
+    /* En móviles permite que bajen de línea */
 }
 
 .project-links a {
@@ -358,11 +375,21 @@ nav ul li a:hover svg {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-.contact-card h2 { margin-bottom: 8px; }
-.contact-card p { color: #cfc9ff; margin-bottom: 18px; }
+.contact-card h2 {
+    margin-bottom: 8px;
+}
 
-.form-row { margin-bottom: 12px; }
-.form-row input, .form-row textarea {
+.contact-card p {
+    color: #cfc9ff;
+    margin-bottom: 18px;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row textarea {
     width: 100%;
     padding: 10px 12px;
     border-radius: 8px;
@@ -371,66 +398,55 @@ nav ul li a:hover svg {
     color: #fff;
 }
 
-.alert { 
-    background: rgba(142, 99, 249, 0.12); 
-    padding: 8px 12px; 
-    border-radius: 8px; 
-    margin-bottom: 12px; 
-    color: #e9e7ff; 
+.alert {
+    background: rgba(142, 99, 249, 0.12);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    color: #e9e7ff;
 }
 
-/*  mejoras visual para el certificado */
-
-
-/* --- Swiper: evita imágenes gigantes --- */
-.cert-card-slider {
-    max-width: 380px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 12px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
+.prueba {
+    margin-top: 12rem;
 }
-
-/* Imagen dentro del slider */
-.cert-image {
-    width: 100%;
-    max-width: 320px; /* controla el tamaño máximo */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-/* Centrar las slides */
-.swiper-slide {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Ajustes del contenedor */
-.certSwiper {
-    padding: 20px 0;
-}
-
-/* Flechas visibles */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #6c5ce7 !important;
-}
-
-/* Bullets */
-.swiper-pagination-bullet {
-    background: #6c5ce7 !important;
-}
-
- /*  slider certficados*/
-
 
 .proyec_title{
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: 2rem;
+}
+
+
+/* Estilo para el tag de GitHub */
+.tag-github {
+    display: inline-block;
+    background-color: #24292f; /* color oscuro tipo GitHub */
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+}
+
+.tag-github:hover {
+    background-color: #444c56;
+    transform: scale(1.05);
+}
+
+/* Estilo para el tag de Live / página web */
+.tag-live {
+    display: inline-block;
+    background: linear-gradient(90deg, #8e63f9, #6a4ef0); /* gradient llamativo */
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+}
+
+.tag-live:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(142, 99, 249, 0.5);
 }
