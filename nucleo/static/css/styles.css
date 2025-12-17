@@ -1,0 +1,16 @@
+/* 1. BASES Y GLOBALES */
+@import url('base/_reset.css');
+@import url('base/_utils.css');
+
+/* 2. LAYOUTS (Estructura principal) */
+@import url('layout/_main_content.css');
+
+/* 3. COMPONENTES (Elementos reusables) */
+@import url('components/_sidebar.css');
+@import url('components/_cards.css');
+@import url('components/_project_card.css');
+@import url('components/_contact_form.css');
+
+/* 4. RESPONSIVE (Media Queries, siempre al final) */
+@import url('responsive/_tablet.css');
+@import url('responsive/_mobile.css');

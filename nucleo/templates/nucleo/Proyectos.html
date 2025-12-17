@@ -1,0 +1,78 @@
+{% extends 'nucleo/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<h2 class="proyec_title">Mis Proyectos</h2>
+
+<div class="grid-proyectos">
+
+    {% for project in projects %}
+    <div class="card-carrousel">
+        <h3 class="proyec_title">{{ project.title }}</h3>
+        <div id="carousel{{ forloop.counter }}" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel{{ forloop.counter }}" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel{{ forloop.counter }}" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel{{ forloop.counter }}" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    {% if project.image1 %}
+                    <img src="{{ project.image1.url }}" class="d-block w-100" alt="{{ project.title }}">
+                    {% else %}
+                    <img src="{% static 'img/proyectos/Lab1.png' %}" class="d-block w-100" alt="{{ project.title }}">
+                    {% endif %}
+                </div>
+                <div class="carousel-item">
+                    {% if project.image2 %}
+                    <img src="{{ project.image2.url }}" class="d-block w-100" alt="{{ project.title }}">
+                    {% else %}
+                    <img src="{% static 'img/proyectos/Lab3.png' %}" class="d-block w-100" alt="{{ project.title }}">
+                    {% endif %}
+                </div>
+                <div class="carousel-item">
+                    {% if project.image3 %}
+                    <img src="{{ project.image3.url }}" class="d-block w-100" alt="{{ project.title }}">
+                    {% else %}
+                    <img src="{% static 'img/proyectos/Lab4.png' %}" class="d-block w-100" alt="{{ project.title }}">
+                    {% endif %}
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ forloop.counter }}"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ forloop.counter }}"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="tech-tags">
+            {% for tech in project.tech_list %}
+            <span class="tag">{{ tech }}</span>
+            {% empty %}
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            {% endfor %}
+
+            {% if project.github %}
+            <a class="tag-github" href="{{ project.github }}" target="_blank" rel="noopener">Código GitHub aquí</a>
+            {% endif %}
+
+            {% if project.live %}
+            <a class="tag-live" href="{{ project.live }}" target="_blank" rel="noopener">Visita el proyecto aquí</a>
+            {% endif %}
+        </div>
+
+
+    </div>
+    {% endfor %}
+
+</div> {% endblock %}

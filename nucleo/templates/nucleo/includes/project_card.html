@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="card-carrousel">
+    <div class="project-image">
+        {% if project.image %}
+            <img src="{{ project.image.url }}" class="d-block w-100" alt="{{ project.title }}">
+        {% else %}
+            <img src="{% static 'img/proyectos/Lab1.png' %}" class="d-block w-100" alt="{{ project.title }}">
+        {% endif %}
+    </div>
+    <div class="tech-tags">
+        {% if project.link %}
+            <a class="tag" href="{{ project.link }}" target="_blank">Live</a>
+        {% endif %}
+    </div>
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description|linebreaksbr }}</p>
+</div>

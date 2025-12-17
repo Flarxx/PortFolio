@@ -1,0 +1,39 @@
+/* =======================================
+    1. ESTILOS BASE Y GLOBALES
+    ======================================= */
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    /* Fondo oscuro principal */
+    color: #fff;
+    display: flex;
+    /* Permite que la barra lateral y el contenido se alineen */
+}
+
+/* --- ESTILOS DE TEXTO GLOBALES --- */
+.develo1 {
+    color: #8e63f9;
+    /* Color azul para énfasis */
+}
+
+.develo {
+    font-size: 1rem;
+}

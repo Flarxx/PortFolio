@@ -1,0 +1,55 @@
+/* =======================================
+    3. CONTENIDO PRINCIPAL (MAIN-CONTENT)
+    ======================================= */
+.main-content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 40px;
+    background: #1a1a1a;
+    color: #fff;
+    display: block;
+    min-height: 100vh;
+}
+
+/* --- Grid de la Home --- */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background: #1a1a1a;
+}
+
+/* --- Grid de Proyectos --- */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+    background: #1a1a1a;
+    align-items: start;
+}
+
+.prueba {
+    margin-top: 12rem;
+}
+
+.proyec_title{
+    margin-left: 2rem;
+}
+
+
+.menu-toggle {
+    display: none; /* en desktop no se ve */
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-toggle svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2;
+}
+

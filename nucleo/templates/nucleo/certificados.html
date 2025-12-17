@@ -1,0 +1,39 @@
+{% extends 'nucleo/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<h2 class="mb-4 text-white text-center prueba">Mis Certificados</h2>
+
+<div id="carouselCertificados" class="carousel slide">
+    
+    <div class="carousel-inner">
+        {% for cert in certificates %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <div class="d-flex justify-content-center">
+                <div class="cert-card-slider">
+                    {% if cert.image %}
+                        <img src="{{ cert.image.url }}" class="cert-image" alt="{{ cert.title }}">
+                    {% else %}
+                        <img src="{% static 'img/certificados/default-cert.png' %}" class="cert-image" alt="{{ cert.title }}">
+                    {% endif %}
+                    <h4 class="cert-title mt-3 text-center">{{ cert.title }}</h4>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Botones -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificados" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+
+</div>
+
+{% endblock %}

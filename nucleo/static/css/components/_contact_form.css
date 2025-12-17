@@ -1,0 +1,97 @@
+/* =======================================
+    5. ESTILOS DE CONTACTO
+    ======================================= */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.contact-card {
+    background: #121212;
+    padding: 28px;
+    border-radius: 12px;
+    width: 640px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.contact-card h2 {
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #cfc9ff;
+    margin-bottom: 18px;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #0f0f14;
+    color: #fff;
+}
+
+.alert {
+    background: rgba(142, 99, 249, 0.12);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    color: #e9e7ff;
+}
+
+/* --- Botón del Formulario --- */
+.btn-project {
+    display: inline-block;
+    background: linear-gradient(90deg, #8e63f9, #6a4ef0);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none; /* Asegura que el botón no tenga borde extra */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* --- Tags de GitHub y Live (Utilidades más específicas de proyectos) --- */
+.tag-github {
+    display: inline-block;
+    background-color: #24292f;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+}
+
+.tag-github:hover {
+    background-color: #444c56;
+    transform: scale(1.05);
+}
+
+.tag-live {
+    display: inline-block;
+    background: linear-gradient(90deg, #8e63f9, #6a4ef0);
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+}
+
+.tag-live:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(142, 99, 249, 0.5);
+}

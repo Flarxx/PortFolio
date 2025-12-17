@@ -1,0 +1,116 @@
+@media (max-width: 768px) {
+
+  /* 1️⃣ El body deja de ser layout horizontal */
+  body {
+    display: block;
+  }
+
+  /* 2️⃣ Sidebar se convierte en TOPBAR */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+
+    min-height: auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+  }
+
+  /* 3️⃣ Ocultamos perfil (no cabe en topbar) */
+ 
+  .profile {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0;
+  }
+
+  .profile h2 span {
+  font-size: 1rem;
+}
+
+
+
+  /* 4️⃣ Navegación horizontal simple (por ahora) */
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 0.9rem;
+    transform: none;
+  }
+
+  nav ul li a:hover {
+    transform: none;
+  }
+
+  /* 5️⃣ El contenido baja para no quedar debajo */
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 200px;
+  }
+
+  /* 6️⃣ Grids más pequeños en mobile */
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+  .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        z-index: 2000;  /* importante para que esté encima del nav */
+        position: relative;
+    }
+  /* Menú inicialmente oculto en mobile */
+nav {
+    display: none;
+    position: absolute;
+    top: 20px; /* Debajo del topbar */
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 10px 0;
+    z-index: 1000; /* < z-index del botón */
+}
+
+/* Mostrar menú cuando tenga clase "active" */
+nav.active {
+    display: block;
+}
+
+nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+}
+
+
+

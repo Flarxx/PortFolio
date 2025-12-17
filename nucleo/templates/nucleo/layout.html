@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="{% static 'img/FOTO-PRUEBA.png' %}" alt="Perfil">
+            <h2><span class="develo1">FULLSTACK</span> <span class="develo">DEVELOPER</span></h2>
+        </div>
+        <!-- 🍔 HAMBURGER -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+    <i data-feather="menu"></i>
+    </button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">
+                        <i data-feather="home"></i> Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'proyectos' %}">
+                        <i data-feather="folder"></i> Proyectos
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'contacto' %}">
+                        <i data-feather="mail"></i> Contacto
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'certificados' %}">
+                        <i data-feather="award"></i> Certificados
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    
+    <script>
+        feather.replace();
+    </script>
+
+  
+</body>
+</html>

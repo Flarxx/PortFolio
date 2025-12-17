@@ -1,0 +1,85 @@
+/* =======================================
+    2. BARRA LATERAL (SIDEBAR)
+    ======================================= */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    background-color: #0d0d0d;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* --- Perfil y Título --- */
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile img {
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2rem;
+}
+
+.profile h2 span {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+}
+
+.profile .tag {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* --- Navegación --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+
+nav ul li {
+    margin: 40px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Estilo para los iconos dentro de los enlaces */
+nav ul li a svg {
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    stroke: #fff;
+}
+
+nav ul li a:hover {
+    color: #8e63f9;
+    background-color: rgba(142, 99, 249, 0.1);
+    transform: translateX(10px);
+}
+
+
+nav ul li a:hover svg {
+    stroke: #8e63f9;
+    filter: drop-shadow(0 0 5px rgba(142, 99, 249, 0.6));
+}
+
+.menu-toggle {
+    display: none;
+}   

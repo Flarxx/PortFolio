@@ -1,0 +1,34 @@
+# ------------------------------------
+# 1. Archivos de Entorno y Secretos (IMPRESCINDIBLE)
+# ------------------------------------
+.env
+db.sqlite3  # Base de datos SQLite local 
+
+# ------------------------------------
+# 2. Entornos Virtuales (venv)
+# ------------------------------------
+venv/
+env/
+.venv/
+
+# ------------------------------------
+# 3. Archivos de Python Generados
+# ------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ------------------------------------
+# 4. Archivos de Django/Medios/Estaticos Generados
+# ------------------------------------
+/media/        # Archivos subidos por el usuario (imagenes de proyectos, etc.)
+/staticfiles/  # Archivos estáticos recolectados para producción
+
+# ------------------------------------
+# 5. Archivos de IDEs/OS (limpieza)
+# ------------------------------------
+.DS_Store      # macOS
+Thumbs.db      # Windows
+.vscode/       # VS Code settings
+.idea/         # PyCharm settings

@@ -1,0 +1,33 @@
+{% extends 'nucleo/layout.html' %}
+
+{% block content %}
+
+
+<div class="grid-cards">
+  <!-- Primer fila: 4 tarjetas pequeñas -->
+
+<div class="card">10+<span>Proyectos Freelance</span></div>
+<div class="card">600+<span>Horas de Formación Web Certificadas</span><a href="#" class="btn-certificados">Ver ›</a></div>
+<div class="card">Django<span>Full Stack Dev</span></div>
+<div class="card">2<span>Años de Experiencia</span></div>
+
+  <!-- Segunda fila: tarjeta grande con texto -->
+  <div class="card big">
+    <h2>Tu socio ideal en desarrollo web</h2>
+    <span>
+      Combino más de 10 años en IT con experiencia en desarrollo front-end y back-end para crear soluciones web modernas, funcionales y escalables. Ya sea desde cero o mejorando sistemas existentes,
+    </span>
+    <div style="margin-top:12px;"><a href="#" class="btn">Contactame ›</a></div>
+  </div>
+
+  <!-- Tercera fila: 2 tarjetas horizontales -->
+  <div class="card wide">
+  Últimos Proyectos<br>
+  <a href="{% url 'proyectos' %}" class="btn">Ver más ›</a>
+</div>
+  <div class="card wide">
+  Clientes Satisfechos<br>
+  <span>Freelance | Proyectos personales | Empresas locales</span>
+</div>
+
+{% endblock %}

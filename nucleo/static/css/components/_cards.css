@@ -1,0 +1,59 @@
+/* --- Tarjetas de la Home --- */
+.card {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.2);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100px;
+}
+
+.card span {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Variaciones de tamaño de tarjetas */
+.card.big {
+    grid-column: span 2;
+    grid-row: span 2;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.card.wide {
+    grid-column: span 2;
+    font-size: 2rem;
+}
+
+/* --- Botones de la Home --- */
+.btn {
+    display: inline-block;
+    color: #8e63f9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-certificados {
+    color: #8e63f9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
